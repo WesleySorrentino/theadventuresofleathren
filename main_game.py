@@ -294,8 +294,10 @@ def Game_Start():
                 print('')
                 ask_intro = False
                 chapter_1.deer_encounter()
+                break
             elif ask_user.lower().startswith('n'):
                 chapter_1.act_1(Character,LowLevelEnemy)
+                break
                 
 
             else:
@@ -344,7 +346,7 @@ def Game_Start():
                 while True:
                     player_input = input('Talk to Elliot | Go back:\n> ')
                     if player_input.lower().startswith('t'):
-                        chapter_1.elliot()
+                        chapter_1.elliot(player.name)
                     elif player_input.lower().startswith('g'):
                         print('')
                         print('You walk back towards that fork in the trail..\n\nbut instead you take the right path.')
@@ -378,7 +380,7 @@ def Game_Start():
                     else:
                         print('Invalid Command\n')
 
-                    if pinky.health > 0 or player.health == 0:
+                    if pinky.health > 0 or player.health != 0:
                         player.health -= pinky.damage()
                     else:
                         print(f'{pinky.name} has been defeated!\n')
@@ -458,7 +460,7 @@ def Game_Start():
                             break
                         elif ask_user.lower() == 'step outside':
                             print('You step outside the tent and see a shadowy figure...')
-                            ask_user = input('Engage | Run:/n> ')
+                            ask_user = input('Engage | Run:\n> ')
                             if ask_user.lower().startswith('e'):
                                 print('You shout at the man... "HEY!!"\n\nThe man runs to you....')
                                 pinky_the_bandit()
@@ -588,6 +590,7 @@ def Game_Start():
                     continue
             else:
                 print('Invalid Command\n')
+            
 
             chapter_2.inside_cave(player.name)
 

@@ -63,7 +63,7 @@ def act_1(Character,Enemy):
     """
     for line in intro.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def deer_encounter():
     '''
