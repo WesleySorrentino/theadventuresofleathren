@@ -22,7 +22,7 @@ def intro():
 
     for line in intro_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def town_intro():
     town_text = f"""
@@ -35,7 +35,7 @@ def town_intro():
 
     for line in town_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 
 def tavern_intro():
@@ -49,7 +49,7 @@ def tavern_intro():
 
     for line in tavern_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def tavern_man(player_name):
     tavern_man_text = f"""
@@ -57,7 +57,7 @@ def tavern_man(player_name):
     """
 
     insult_text = f"""
-    You call him a bich boy...
+    You call him a bitch boy...
 
     Mysterious Man: He smirks "I like you kid" Names Leroy.
 
@@ -86,7 +86,7 @@ def tavern_man(player_name):
 
     for line in tavern_man_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
     leroy_encounter = True
     talk_options = ['1. Insult','2. Obviously you']
@@ -100,7 +100,7 @@ def tavern_man(player_name):
         if player_input == '1':
             for line in insult_text.split('\n'):
                 print(line.strip())
-                time.sleep(0.8)
+                time.sleep(0.5)
 
             if three not in talk_options:
                 talk_options.append(three)
@@ -115,7 +115,7 @@ def tavern_man(player_name):
         elif player_input == '3':
             for line in three_text.split('\n'):
                 print(line.strip())
-                time.sleep(0.8)
+                time.sleep(0.5)
         elif player_input.lower().startswith('e'):
             leroy_encounter = False
             print('')
@@ -132,7 +132,7 @@ def merchant_intro(player_name,player_inv):
 
     for line in merchant_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
     
     talk_options = ['1. Buy','2. Sell','3. Ask about cave']
     merchant_inventory = {'Cabbage':4,'Bread':5}
@@ -205,7 +205,7 @@ def merchant_intro(player_name,player_inv):
                 else:
                     print("You don't have that item!")
             
-            elif ask_user.lower() == 'family sword' or 'spell book' or 'shrouded orb' or 'gold':
+            elif ask_user.lower() == 'family sword' or 'spell book' or 'shrouded orb' or 'gold' or 'map of leathren':
                 print(f"You can't sell {ask_user}!\n")
             
             elif ask_user.lower().startswith('e'):
@@ -216,6 +216,10 @@ def merchant_intro(player_name,player_inv):
         
         elif player_input == '3':
             print('Merchant: A cave? If its around here I never seen one\n')
+
+        elif player_input.lower().startswith('e'):
+            merchant_encounter = False
+            break
         
         else:
             print('Invalid Command\n')
@@ -245,7 +249,7 @@ def journey_to_cave():
 
     for line in journey_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def cave_entrance(player_name):
     cave_entrance_text = f"""
@@ -260,7 +264,7 @@ def cave_entrance(player_name):
 
     for line in cave_entrance_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def inside_cave(player_name):
     cave_text = f"""
@@ -287,7 +291,7 @@ def inside_cave(player_name):
 
     for line in cave_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
 
 def abdul_death(player_name):
     death_text = f"""
@@ -316,4 +320,4 @@ def abdul_death(player_name):
 
     for line in death_text.split('\n'):
         print(line.strip())
-        time.sleep(0.8)
+        time.sleep(0.5)
