@@ -773,12 +773,6 @@
   ('_py_abc',
    'c:\\users\\wesley\\appdata\\local\\programs\\python\\python38-32\\lib\\_py_abc.py',
    'PYMODULE'),
-  ('chapter_2',
-   'C:\\Users\\Wesley\\Desktop\\py\\TheFreshadventurerofLeathren\\Version3\\chapter_2.py',
-   'PYMODULE'),
-  ('chapter_1',
-   'C:\\Users\\Wesley\\Desktop\\py\\TheFreshadventurerofLeathren\\Version3\\chapter_1.py',
-   'PYMODULE'),
   ('random',
    'c:\\users\\wesley\\appdata\\local\\programs\\python\\python38-32\\lib\\random.py',
    'PYMODULE')])
